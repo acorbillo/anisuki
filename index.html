@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Anisuki | Home</title>
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+  
+<body>
+    <header id="top">
+		<nav>
+			<h1 id="logo">Anisuki</h1>
+			<ul>
+				<li><a href="#blogs">Blogs</a></li>
+				<li></li><a href="#stream">Stream Online</a></li>
+				<li><a href="#apks">Anime Apks</a></li>
+			</ul>
+		</nav>
+		
+		<input class="search" type="text" placeholder="Search">
+		
+		<img id="menu" src="./img/menu.png" onclick="showMenu()">
+		
+		<ul id="dropdown">
+			<img onclick="closeMenu()" id="close" src="./img/close.png">
+			<li><a href="#blogs">Blogs</a></li>
+			<li><a href="#stream">Stream Online</a></li>
+			<li><a href="#apks">Anime Apks</a></li>
+		</ul>
+	</header>
+
+	<section class="intro">
+		<h2>Welcome to Anisuki!</h2>
+		<p>This is a website for all Anime fans.</p>
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/VcrhiYwCSsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</section>
+
+	<section class="content">
+	
+		<div id="blogs" class="content-section">
+			<p>Here are the latest blogs and news for you:</p>
+			<ul>
+				<li>
+					<a href="https://www.animenewsnetwork.com/" target="_blank">Anime News Network</a>
+				</li>
+				<li>
+					<a href="https://myanimelist.net/news" target="_blank">My Anime List</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="stream"class="content-section">
+			<p>You can stream anime online for free in the links below!</p>
+			<ul>
+				<li>
+					<a href="https://ww3.gogoanime2.org/home" target="_blank">GogoAnime</a>
+				</li>
+				<li>
+					<a href="https://animixplay.to/" target="_blank">Animixplay</a>
+				</li>
+				<li>
+					<a href="https://zoro.to/home" target="_blank">Zoro.to</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="apks" class="content-section">
+			<p>If you want an app to watch your favorite anime anytime, anywhere, here are some recommended apks:</p>
+			<ul>
+				<li>
+					<a href="https://www.rockmods.net/2021/08/AnimeFanzTube.html?m=1" target="_blank">Animofanz</a>
+				</li>
+				<li>
+					<a href="https://github.com/saikou-app/saikou/releases" target="_blank">Saikou</a>
+				</li>
+				<li>
+					<a href="https://github.com/jmir1/aniyomi/releases" target="_blank">Aniyomi</a>
+				</li>
+			</ul>
+		</div>
+		
+		<button class="totop-btn"><a href="#top">Back to Top</a></button>
+	</section>
+
+	<footer class="main-footer">
+		<span>&#169 Copyright 2023</span>
+		<div>
+			<a href="anisuki-about.html">About</a>
+			<a href="anisuki-contact.html">Contact Us</a>
+			<a href="anisuki-disclaimer.html">Disclaimer</a>
+		</div>
+	</footer>
+	
+	<script>
+		
+		let header = document.getElementById('top');
+		let menu = document.getElementById('menu');
+		let dropdown = document.getElementById('dropdown');
+		let close = document.getElementById('close');
+		let logo = document.getElementById('logo');
+			
+		function showMenu(){
+			
+			header.style.display = "block";
+			logo.style.display = "none";
+			menu.style.display = "none";
+			dropdown.style = `
+				display: flex;
+			`
+		};
+		
+		function closeMenu(){
+		
+			dropdown.style.display = "none";
+			header.style.display = "flex";
+			logo.style.display = "block";
+			menu.style = `
+				@media (max-width: 480px) {
+					display: block;
+				}
+			`
+		};
+
+	</script>
+</body>
+</html>
